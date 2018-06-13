@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: hello-world
+server:
+  port: 9527
+
+my:
+  name: liwenchao
+  age: 12
+  number: ${random.int}
+  uuid: ${random.uuid}
+  max: ${random.int(10)}
+  value: ${random.value}
+  greeting: hi, I'm ${my.name}
+
+your:
+  name: bruce
+  age: 98
+  number: ${random.int}
+  uuid: ${random.uuid}
+  max: ${random.int(10)}
+  value: ${random.value}
+  greeting: hi, I'm ${my.name}
+
+management:
+  port: 9500
+  security:
+    enabled: false
+endpoints:
+  shutdown:
+    enabled: true
+
+

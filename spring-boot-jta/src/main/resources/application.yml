@@ -1,0 +1,22 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: jta
+  datasource:
+    url: jdbc:mysql://119.23.228.243:3306/spring-cloud?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: mysqlforliwenchao2791372
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  redis:
+    host: 119.23.228.243
+    port: 6379
+    password: redisforliwenchao2791372
+    pool:
+      max-idle: 1000
+      min-idle: 0
+      max-active: 1000
+      max-wait: -1

@@ -1,0 +1,18 @@
+2018-05-25 14:55:44.335 INFO  com.java.genericity.Test1:29 - 泛型测试
+2018-05-25 14:58:44.315 INFO  com.java.genericity.Test1:43 - 泛型测试
+2018-05-25 14:58:52.243 INFO  com.java.genericity.Test1:29 - 泛型测试
+2018-05-25 15:09:18.179 INFO  com.java.genericity.Test1:57 - 泛型相同
+2018-05-25 15:23:16.247 INFO  com.java.genericity.Test1:70 - 泛型测试
+2018-05-25 15:23:16.248 INFO  com.java.genericity.Test1:71 - 泛型测试
+2018-05-25 15:23:59.162 INFO  com.java.genericity.Test1:70 - 泛型测试key is 123456
+2018-05-25 15:23:59.164 INFO  com.java.genericity.Test1:71 - 泛型测试key is key_vlaue
+2018-05-25 15:24:15.489 INFO  com.java.genericity.Test1:70 - 泛型测试key is 123456
+2018-05-25 15:24:15.490 INFO  com.java.genericity.Test1:71 - 泛型测试key is key_vlaue
+2018-05-25 15:26:23.617 INFO  com.java.genericity.Test1:81 - 泛型测试
+2018-05-25 15:26:23.618 INFO  com.java.genericity.Test1:82 - 泛型测试
+2018-05-25 15:26:23.618 INFO  com.java.genericity.Test1:83 - 泛型测试
+2018-05-25 15:26:23.618 INFO  com.java.genericity.Test1:84 - 泛型测试
+2018-05-25 15:26:58.749 INFO  com.java.genericity.Test1:81 - 泛型测试key is 111111
+2018-05-25 15:26:58.751 INFO  com.java.genericity.Test1:82 - 泛型测试key is 4444
+2018-05-25 15:26:58.751 INFO  com.java.genericity.Test1:83 - 泛型测试key is 55.55
+2018-05-25 15:26:58.751 INFO  com.java.genericity.Test1:84 - 泛型测试key is false

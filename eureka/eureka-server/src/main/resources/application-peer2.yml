@@ -1,0 +1,17 @@
+server:
+  port: 9002
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    service-url:
+      defaultZone:
+        http://peer1:9001/eureka/
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 3000
+spring:
+  application:
+    name: peer2
+  profiles:
+    active: peer2

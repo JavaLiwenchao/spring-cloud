@@ -1,0 +1,31 @@
+server:
+  port: 9411
+spring:
+  application:
+    name: zipkin-server
+
+#  datasource:
+#    url: jdbc:mysql://119.23.228.243:3306/spring-cloud?useUnicode=true&characterEncoding=utf8&useSSL=false
+#    username: root
+#    password: mysqlforliwenchao2791372
+#    driver-class-name: com.mysql.jdbc.Driver
+#  rabbitmq:
+#    host: 119.23.228.243
+#    port: 5672
+#    username: admin
+#    password: rabbitforliwenchao2791372
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9527/eureka/
+zipkin:
+  storage:
+    type: elasticsearch
+    StorageComponent: elasticsearch
+    elasticsearch:
+      cluster: elasticsearch
+      max-requests: 30
+      index: zipkin
+      index-shards: 3
+      index-replicas: 1
+      hosts: localhost:9200

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration monitorInterval="1">
+	<appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36}:%L - %msg%xEx%n" />
+		</Console>
+		
+		<RollingFile name="RollingFile" fileName="logs/core.log"
+			filePattern="logs/$${date:yyyy-MM}/core-%d{MM-dd-yyyy}-%i.log.gz">
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36}:%L - %msg%xEx%n" />
+			<SizeBasedTriggeringPolicy size="100 MB"/>
+			<DefaultRolloverStrategy max="500"/>
+		</RollingFile>
+
+		<RollingFile name="TaskRollingFile" fileName="logs/core-task.log"
+					 filePattern="logs/$${date:yyyy-MM}/core-task-%d{MM-dd-yyyy}-%i.log.gz">
+			<PatternLayout
+					pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36}:%L - %msg%xEx%n" />
+			<SizeBasedTriggeringPolicy size="100 MB"/>
+			<DefaultRolloverStrategy max="500"/>
+		</RollingFile>
+		
+		<Console name="Log4jdbcConsole" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36}:%L - %msg%xEx%n" />
+		</Console>
+	    
+	    <RollingFile name="Log4jdbcRollingFile" fileName="logs/core.jdbc.log"
+			filePattern="logs/$${date:yyyy-MM}/core.jdbc-%d{MM-dd-yyyy}-%i.log.gz">
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36}:%L - %msg%xEx%n" />
+			<SizeBasedTriggeringPolicy size="100 MB"/>
+			<DefaultRolloverStrategy max="500"/>
+		</RollingFile>
+	</appenders>
+	
+	<loggers>
+		<logger name="log4jdbc.log4j2" level="info" additivity="false">
+			<MarkerFilter marker="LOG4JDBC_SQL" onMatch="ACCEPT" onMismatch="DENY"/>
+			<appender-ref ref="Log4jdbcConsole" />
+			<appender-ref ref="Log4jdbcRollingFile" />
+		</logger>
+
+		<logger name="/" level="debug" additivity="false">
+			<appender-ref ref="RollingFile" />
+			<appender-ref ref="Console" />
+		</logger>
+
+		<root level="debug">
+			<appender-ref ref="RollingFile" />
+			<appender-ref ref="Console" />
+		</root>
+	</loggers>
+	
+</configuration>

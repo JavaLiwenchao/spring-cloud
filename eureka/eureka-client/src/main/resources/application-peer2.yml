@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: eureka-client
+server:
+  port: 9002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9527/eureka
+  instance:
+    lease-expiration-duration-in-seconds: 10
+    lease-renewal-interval-in-seconds: 3

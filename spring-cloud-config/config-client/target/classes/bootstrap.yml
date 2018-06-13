@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      # uri: http://localhost:9500
+      fail-fast: true
+      discovery:
+        service-id: config-server
+        enabled: true
+  profiles:
+    active: dev
+
+  amqp:
+    host: 119.23.228.243
+    username: admin
+    password: rabbitforliwenchao2791372
+    port: 5762
+    publisher-confirms: true
+    virtual-host: /
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9527/eureka
+server:
+  port: 9501
+management:
+  security:
+    enabled: false
